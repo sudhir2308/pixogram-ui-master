@@ -1,0 +1,49 @@
+<div class="wrapper wrapper-with-leftnav">
+
+  <div class="container-fluid module-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="module-header-title">
+            New Media Page
+        </h1>
+      </div>
+    </div>
+
+  <div draggable="true" ngClass="{{dragAreaClass}}">
+    <div class="row">
+      <div class="col-md-12 text-center" >
+            <div class="upload-file-container">
+                    <div class="upload-file-header">
+          <label class="model-label">
+              Browse<span>*</span>
+            </label>
+          <div class="fileUpload btn btn-primary pull-right" >
+            <span (click)="file.click()">Browse File</span>
+                                <input type="file" 
+                                #file="ngModel" ngModel name="file"
+                                [multiple]="(maxFiles > 1)"                  
+                                (change) = "onFileChange($event.target.files)"
+                                class="upload" />
+                            </div>
+                    </div>
+                    <div *ngIf="uploadedFile">
+          <div class="upload-file-details">
+            {{uploadedFile.name}}<span></span>
+          </div>
+      </div>
+              
+
+          </div>    
+
+      Or Drag & Drop to upload your files
+    </div>
+  </div>
+
+  </div>
+  <div class="row error" *ngIf="errors.length > 0">    
+    <ul>
+      <li *ngFor="let err of errors">{{err}}</li>
+    </ul>
+  </div>  
+  </div>              
+</div>

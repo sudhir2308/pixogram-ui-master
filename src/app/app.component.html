@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+ mat-toolbar>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://material.angular.io/">Angular Material</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.npmjs.com/package/@angular/flex-layout">Flex-Layout</a>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <a target="_blank" href="https://www.letsboot.com/">Letsboot.com</a>
+  </mat-toolbar-row>
+</mat-toolbar 
+
+
+<mat-form-field class="search-form">
+  <input matInput placeholder="Search Picture" type="text">
+</mat-form-field>
+<button button="submit" mat-raised-button color="primary">Search</button>
+<br>
+
+<div fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <mat-card class="card-picture" *ngFor="let picture of pictures" (click)="display(picture.img)">
+    <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+      <span fxFlex="80%">{{picture.title}}</span>
+      <mat-icon fxFlex="10%">mode_edit</mat-icon>
+      <mat-icon fxFlex="10%">delete</mat-icon>
+    </mat-card-title>
+    <img mat-card-image [src]="picture.img">
+  </mat-card>
+</div> --> 
+<router-outlet></router-outlet>

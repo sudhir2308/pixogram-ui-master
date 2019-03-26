@@ -1,0 +1,67 @@
+<app-header
+  [uploadmedias] = "uploadmedias">
+</app-header>
+<div class="wrapper wrapper-with-leftnav">
+  <app-leftnav
+    [uploadmedias] = "uploadmedias"
+    [linkactive] = "linkactive">
+  </app-leftnav>
+  <div class="container-fluid module-container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="module-header-title">
+            New Media Page for multiple
+        </h1>
+      </div>
+    </div>
+    <!-- Search Container Start-->
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading accordion-toggle" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+          <div class="panel-title">Search</div>
+        </div>
+        <div id="collapseOne" class="collapse in">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-2 form-group">
+                <label class="model-label">Assessment Id</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-md-2 form-group">
+                <label class="model-label">ISIN(s)</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-md-2 form-group">
+                <label class="model-label">Portfolio</label>
+              </div>
+              <div class="col-md-6 form-group">
+                <button type="button" class="btn btn-secondary pull-right" data-dismiss="modal">Reset</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2 form-group">
+                <label class="model-label">User Name</label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-md-4 form-group">
+                <label class="model-label">Type of Assessment</label>
+                <select class="form-control">
+                  <option>Select Assessment Type</option>
+                  <option>eligiliblity</option>
+                  <option>limit</option>
+                  <option>both</option>
+                </select>
+                <i class="fa fa-caret-down"></i>
+              </div>
+              <div class="col-md-3 form-group">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Search Container End-->
+    <br><br>
+  </div>
+</div>

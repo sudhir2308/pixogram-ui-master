@@ -1,0 +1,40 @@
+<div>
+  <div class="leftnav-top-block">
+  </div>
+</div>
+<div class="nav-links">
+
+  <div *ngIf ="uploadmedias">
+    <a routerLink="/singleuploadmedia" [ngClass]="{'active':linkactive==='singleuploadmedia'}">
+      Single Media
+    </a>
+    <a routerLink="/multipleuploadmedia" [ngClass]="{'active':linkactive==='multipleuploadmedia'}">
+      Multiple Media
+    </a>
+  </div>
+
+
+  <div *ngIf ="configurations">
+    <a routerLink="/portfoliotree" [ngClass]="{'active':linkactive==='portfoliotree'}">
+      Portfolio Tree
+    </a>
+    <a routerLink="/ruledesign" [ngClass]="{'active':linkactive==='ruledesign'}">
+      Rule Design
+    </a>
+    <a routerLink="/ruleactivation" [ngClass]="{'active':linkactive==='ruleactivation'}">
+      Rule Activation
+    </a>
+    <a routerLink="/staticConfig" [ngClass]="{'active':linkactive==='staticconfig'}">
+      Static configurations
+    </a>
+    <a routerLink="/scheduleassessments" [ngClass]="{'active':linkactive==='scheduleassessments'}">
+      Schedule Assessments
+    </a>
+  </div>
+
+  <div *ngIf ="usersroles">
+    <a routerLink="/ledexpert" routerLinkActive="active">
+      Roles & Permissions
+    </a>
+  </div>
+</div>

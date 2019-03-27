@@ -52,10 +52,20 @@ export class UploadMediaFileComponent implements OnInit {
 
   @HostListener('drop', ['$event']) onDrop(event) {
     this.dragAreaClass = 'droparea';
+
     event.preventDefault();
     event.stopPropagation();
     const files = event.dataTransfer.files;
-    this.saveFiles(files);
+    const count = files.length;
+    console.log('File Count:' + count);
+    for (var i = 0; i < files.length; i++) {
+             console.log('File name:' + files[i].name);
+             this.uploadedFile = files[i];
+
+    }    
+
+   // this.saveFiles(files);
+
   }
 
   saveFiles(files) {

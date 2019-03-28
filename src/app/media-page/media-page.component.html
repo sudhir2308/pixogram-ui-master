@@ -3,7 +3,7 @@
 </app-header>
 <div class="wrapper wrapper-with-leftnav">
 
-  <div style="text-align:center">
+  <!-- <div style="text-align:center">
     <h1>
       My Media Page
     </h1>
@@ -15,7 +15,29 @@
         <mat-icon fxFlex="10%">mode_edit</mat-icon>
         <mat-icon fxFlex="10%">delete</mat-icon>
       </mat-card-title>
-      <img mat-card-image [src]="picture.img">
+      <img mat-card-image class= "imagelist" [src]="picture.img">
+      <<video width="400" controls>
+        <source src= url("https://www.youtube.com/watch?v=vLoy96ONjcw") type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
     </mat-card>
-  </div>
+  </div> -->
+  <div class = "tab-wrapper ">
+      <ul class="tab-navigation">
+        <li ng-class="{'active': activeTab != 2}">
+          <a href="#" ng-click="activeTab=1">Tab Baslik 1</a>
+        </li>
+        <li ng-class="{'active': activeTab == 2}">
+          <a href="#" ng-click="activeTab=2">Tab Baslik 2</a>
+        </li>
+      </ul>
+
+      <div class="tab-content" ng-class="{'active': activeTab != 2}">
+        <p>Tab icerik 1</p>
+      </div>
+
+      <div class="tab-content" ng-class="{'active': activeTab == 2}">
+        <p>Tab icerik 2</p>
+      </div>
+    </div>
 </div>

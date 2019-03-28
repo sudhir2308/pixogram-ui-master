@@ -88,3 +88,33 @@ h2.title{
 	color:#003299;
 	background-color: #DCE1EF;
 }
+.header-section {
+  border: 0.05rem solid grey;
+  padding: 0 2rem;
+}
+.header-section-top {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.logo-pixogram {
+  min-width: 3rem;
+  max-height: 3rem;
+}
+.media-section {
+  display: inline-block;
+  margin: 0 auto;
+}
+.btn-header {
+  min-height: 3rem;
+}
+.header-section-bottom {
+  display: inline;
+}
+.profile-image {
+  margin-right: 2rem;
+  max-height: 4rem;
+  min-width: 4rem;
+}
+.user-welcome {
+  font-size: 2rem;
+}

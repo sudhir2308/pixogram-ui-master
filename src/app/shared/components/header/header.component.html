@@ -1,9 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid ui-01 no-padding">
-    <!-- <div class="navbar-header">
-      <div class="logo_pixogram"></div>
-      <div><h2 class="title">Pixo Gram Application</h2></div>
-    </div> -->
     <div class="nav navbar-nav navbar-right ca-align-middle">
       <a class="notification-icon">
         <i class="fa fa-envelope fa-1" aria-hidden="true"></i>
@@ -14,7 +10,6 @@
       </a>
       <label class="divider-icon"></label>
       <i class="fa fa-user fa-1" aria-hidden="true"></i>
-
       <div class="userlogin">
         <div class="userlogin-text">
           <span *ngIf="username == 'pixogram'">Sudheer J</span>
@@ -24,46 +19,22 @@
     </div>
   </div>
   <div class="header-section">
-      <div class="header-section-top">
-        <div class="logo" routerLink="/Dashboard">
-          <img src="../../../../assets/images/pixogram_logo.png" class="logo-pixogram" alt="logo-pixogram" />
-        </div>
-        <div class="media-section">
-          <button class= "btn-upload-media btn-header" routerLink="/singleuploadmedia">Upload media</button>
-          <button class= "btn-my-media btn-header" routerLink="/mediapage">My media</button>
-          <button class= "btn-followers btn-header" routerLink="/portfoliotree">Followers / Following</button>
-        </div>
-        <div class="profile">
-            <button class= "btn-account btn-header" routerLink="/ledexpert">Account</button>
-        </div>
+    <div class="header-section-top">
+      <div class="logo" routerLink="/Dashboard">
+        <img src="../../../../assets/images/pixogram_logo.png" class="logo-pixogram" alt="logo-pixogram" />
       </div>
-      <div class="header-section-bottom">
-        <img src="../../../../assets/images/victory.jpg" class="profile-image" alt="profile-image">
-        <span class="user-welcome">Welcome, {{username}}</span>
+      <div class="media-section">
+        <button class= "btn-upload-media btn-header" routerLink="/singleuploadmedia">Upload media</button>
+        <button class= "btn-my-media btn-header" routerLink="/mediapage">My media</button>
+        <button class= "btn-followers btn-header" routerLink="/portfoliotree">Followers / Following</button>
+      </div>
+      <div class="profile">
+          <button class= "btn-account btn-header" routerLink="/ledexpert">Account</button>
       </div>
     </div>
-  <!-- <div class="container-fluid brand-01 no-padding">
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li routerLink="/Dashboard" [ngClass]="{ active: dashboardExpert }">
-          <a>Home</a>
-        </li>
-        <li
-          routerLink="/singleuploadmedia"
-          [ngClass]="{ active: uploadmedias }"
-        >
-          <a>Upload Media</a>
-        </li>
-        <li routerLink="/mediapage" [ngClass]="{ active: mymedia }">
-          <a>My Media</a>
-        </li>
-        <li routerLink="/portfoliotree" [ngClass]="{ active: configurations }">
-          <a>Followers/Following</a>
-        </li>
-        <li routerLink="/ledexpert" [ngClass]="{ active: usersroles }">
-          <a>Accounts</a>
-        </li>
-      </ul>
+    <div class="header-section-bottom">
+      <img src="../../../../assets/images/victory.jpg" class="profile-image" alt="profile-image">
+      <span class="user-welcome">Welcome, {{username}}</span>
     </div>
-  </div> -->
+  </div>
 </nav>

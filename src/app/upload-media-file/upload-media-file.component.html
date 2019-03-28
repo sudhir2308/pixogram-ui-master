@@ -1,6 +1,6 @@
 <div class="wrapper wrapper-with-leftnav">
 
-  <div class="container-fluid module-container">
+  <!-- <div class="container-fluid module-container">
     <div class="row">
       <div class="col-md-12">
         <h1 class="module-header-title">
@@ -19,7 +19,7 @@
                   </label>
                   <div class="fileUpload btn btn-primary pull-right" >
                     <span (click)="file.click()">Browse File</span>
-                    <input type="file" #file="ngModel" ngModel name="file" [multiple]="(maxFiles > 1)" 
+                    <input type="file" #file="ngModel" ngModel name="file" [multiple]="(maxFiles > 1)"
                       (change) = "onFileChange($event.target.files)"  class="upload" />
                   </div>
                 </div>
@@ -28,10 +28,10 @@
                       {{uploadedFile.name}}<span></span>
                   </div>
                 </div>
-            </div>    
+            </div>
               Drag & Drop to upload your files
               <div id="output" style="min-height: 200px; white-space: pre; border: 1px solid black;"
-              
+
               >
               DROP FILES HERE FROM FINDER OR EXPLORER
               </div>
@@ -39,10 +39,53 @@
     </div>
   </div>
 
-  <div class="row error" *ngIf="errors.length > 0">    
+  <div class="row error" *ngIf="errors.length > 0">
     <ul>
       <li *ngFor="let err of errors">{{err}}</li>
     </ul>
-  </div>  
-  </div>              
+  </div>
+  </div> -->
+
+  <div class="upload-media-section">
+    <div class="media-upload-title"><h1>New Media Page</h1></div>
+    <div class="media-wrapper">
+      <div class="left-section">
+        <form [formGroup]="profileForm">
+            <table style="width:100%">
+              <tr>
+                <td> Browse:</td>
+                <td><input type="file" #file="ngModel" ngModel name="file" [multiple]="(maxFiles > 1)"
+                  (change) = "onFileChange($event.target.files)"  class="upload media-input"></td>
+              </tr>
+              <tr>
+                <td>Title:</td>
+                <td><input type="text" class= "media-input"></td>
+              </tr>
+              <tr>
+                <td>Description:</td>
+                <td><textarea class= "media-input"></textarea></td>
+              </tr>
+              <tr>
+                <td>Tags:</td>
+                <td><input type= "text" class= "media-input"></td>
+              </tr>
+              <tr>
+                <td>Effects:</td>
+                <td><input type="radio" name="effect" value="sepia" checked> Sepia
+                  <input type="radio" name="effect" value="grey"> Grey
+                  <input type="radio" name="effect" value="brightness"> Brightness
+                  <input type="radio" name="effect" value="contrast"> Contrast<br></td>
+              </tr>
+            </table>
+        </form>
+      </div>
+      <div class="right-section">
+        <div class= "dragdrop-text">
+          Drag & Drop here <br>
+          and click on upload
+        </div>
+      </div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!profileForm.valid" class= "btn-form-submit">Submit</button>
 </div>
